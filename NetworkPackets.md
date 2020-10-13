@@ -1,0 +1,632 @@
+The packets in the list are extracted from logging functions from the 2015 Chinese client so it can be out of date or incomplete.
+
+Client:
+* CQ: client query
+* CN: client notify
+* CA: client acknowledge
+
+Server:
+* SQ: server query
+* SN: server notify
+* SA: server acknowledge
+
+## Unsorted
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CQ_CALL_MONSTER |  |  |
+| CQ_ITEM_MERGE |  |  |
+| CQ_ITEM_USE |  |  |
+| CQ_SELL_SHOP_ITEM |  |  |
+| CQ_GET_GROUND_ITEM |  |  |
+| CQ_GAMETICKETTING_TO_GAME |  |  |
+| CN_GAME_PLAYER_SYNC_BY_INT |  |  |
+| CN_GAME_PLAYER_SYNC_ACTIONSTATE_ONLY |  |  |
+| CA_SET_GAME_GVT |  |  |
+| CQ_BUY_SHOP_ITEM |  |  |
+| CQ_BUY_CSHOP_ITEM |  |  |
+| CN_ITEM_DELETE |  |  |
+| CN_REQUEST_SHOP_ITEM_LIST |  |  |
+| CQ_ITEM_CHANGE |  |  |
+| CQ_PLAYER_USE_SKILL |  |  |
+| CQ_PLAYER_CAST_SKILL |  |  |
+| CQ_STANCE_REFRESH |  |  |
+| CQ_REQUEST_SUMMARY_INFO_EACH |  |  |
+| CN_REQUEST_SUMMARY_REWARD |  |  |
+| CN_ANTIHACK_AUTH |  |  |
+| CN_ANTIHACK_REPORT |  |  |
+| CN_MONSTER_ACTIVATED |  |  |
+| CQ_GET_CHARACTER_INFO |  |  |
+| CQ_SET_LEADER |  |  |
+| CQ_GAME_PLAYER_TAG |  |  |
+| CN_CUSTOM_PACKET |  |  |
+| CQ_SKILL_UPGRADE |  |  |
+| CQ_SKILL_UPGRADE_PVP |  |  |
+| CQ_TITLE_SELECT |  |  |
+| CQ_ITEM_EQUIP |  |  |
+| CQ_ITEM_UNEQUIP |  |  |
+| CQ_WEAPON_EQUIP |  |  |
+| CQ_GEAR_EQUIP |  |  |
+| CQ_GEAR_UNEQUIP |  |  |
+| CQ_MASTERGEAR_SELECT |  |  |
+| CQ_MASTERGEAR_RENAME |  |  |
+| CQ_CHARACTER_UNLOCK |  |  |
+| CQ_SKILL_SELECT |  |  |
+| CQ_SKILL_SWAP |  |  |
+| CQ_AREA_POPULARITY |  |  |
+| CA_SORTIE_ROOM_FOUND |  |  |
+| CN_SORTIE_ROOM_CONFIRM |  |  |
+| CQ_START_GAME |  |  |
+| CQ_PVE_ENQUEUE_RANDOM_STAGE |  |  |
+| CQ_ENQUEUE_GAME |  |  |
+| CQ_ENQUEUE_PVP_QUEUE |  |  |
+| CQ_MASTER_PICK |  |  |
+| CQ_MASTER_UNPICK |  |  |
+| CQ_READY_SORTIE_ROOM |  |  |
+| CQ_WEAPON_UPGRADE |  |  |
+| CQ_INVENTORY_EXPAND |  |  |
+| CN_INVENTORY_REARRANGE |  |  |
+| CN_UPDATE_KEY_SETTINGS |  |  |
+| CQ_ADD_STATUS |  |  |
+| CQ_REMOVE_STATUS |  |  |
+| CQ_HIT_PROCESS |  |  |
+| CN_CONVERT_TO_SERVER_REMOTE |  |  |
+| CN_REMOTE_ACTIVATED |  |  |
+| CQ_DESTROY_REMOTE |  |  |
+| CQ_REQUEST_SP_ACTION |  |  |
+| CQ_NOTICE_EVENT_TRIGGER |  |  |
+| CQ_CHARACTER_SKIN_SELECT |  |  |
+| CQ_COMMUNITY_STATUS_MESSAGE |  |  |
+| CQ_COMMUNITY_CHANNEL_MOVE |  |  |
+| CQ_COMMUNITY_BLOCK_ADD |  |  |
+| CQ_COMMUNITY_BLOCK_REMOVE |  |  |
+| CN_CHARACTER_SKIN_UNLOCK |  |  |
+| CA_USE_LIFERECOVER |  |  |
+| CA_REVIVE_BY_COIN |  |  |
+| CQ_REVIVE_PARTYMEMBER_USE_MY_LIFECOUNT |  |  |
+| CN_SINGLEMODE_CHANNEL_HELLO |  |  |
+| CN_SINGLEMODE_GAME_HELLO |  |  |
+| CN_SINGLEMODE_GAMESTART_INFO |  |  |
+| CQ_WAREHOUSE_ITEM_CHANGE |  |  |
+| CQ_WAREHOUSE_ITEM_MERGE |  |  |
+| CN_WAREHOUSE_REARRANGE |  |  |
+| CQ_WAREHOUSE_EXPAND |  |  |
+| CN_WAREHOUSE_ITEM_LIST |  |  |
+| CQ_REWARD_SELECT_SLOT |  |  |
+| CN_SET_TUTORIAL_STATE |  |  |
+| CN_REQUEST_DAILY_MISSION_REWARD |  |  |
+| CQ_DAILY_MISSION_CHANGE |  |  |
+| CQ_PVP_DETAIL_RECORD |  |  |
+| CN_WAREHOUSE_ITEM_DELETE |  |  |
+| CN_MISS_REMOTE |  |  |
+| CN_REFLECT_REMOTE |  |  |
+| CQ_BROADCAST_GAME_PING_DATA |  |  |
+| CQ_LOADING_PROGRESS_DATA |  |  |
+| CQ_PVP_RANK_CHARACTER_BAN |  |  |
+| CQ_PVP_RANK_CHARACTER_ASSIGN |  |  |
+| CQ_TIER_RECORD |  |  |
+| CQ_TIER_STAGE_RECORD |  |  |
+| CQ_PVE_RANKING |  |  |
+| CN_PING |  |  |
+| CQ_RTT_TIME |  |  |
+| CQ_COMPLETE_NONSYNC_EVENTS |  |  |
+| CQ_INTERACTION_CASTING |  |  |
+| CQ_INTERACTION_CANCEL |  |  |
+| CQ_PLAYER_SYNC_TELEPORT |  |  |
+| CQ_SAVE_SETTINGS |  |  |
+| CQ_ITEM_TRADE |  |  |
+| CQ_SELECT_BADGE |  |  |
+| CQ_TRANSFORM_CHARACTER |  |  |
+| CQ_HONOR |  |  |
+| CQ_BLAME |  |  |
+| CQ_WATCH_GAME |  |  |
+| CN_NCGUARD_MSG |  |  |
+
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_ENTER_WAITING_QUEUE |  |  |
+| SA_REFRESH_WAITING_QUEUE |  |  |
+| SA_WORLD_SET_INFO_LIST |  |  |
+| SQ_CITYLOBBY_JOIN_CITY |  |  |
+| SN_SCAN_END |  |  |
+| SA_LOADING_COMPLETE |  |  |
+| SN_FIRST_HELLO_GAME |  |  |
+| SN_GAME_FIELD_READY |  |  |
+| SN_P2P_CONNECTION |  |  |
+| SN_SET_GAME_GVT |  |  |
+| SQ_DO_CONNECT_SERVER_TOCITY_FROMGAME |  |  |
+| SQ_PREPARE_HANDOVER_TO_CHANNEL |  |  |
+| SN_HANDEDOVER_PARTY_PREPARED |  |  |
+| SN_DISCONNECT_REASON |  |  |
+| SA_RETURN_TO_CITY |  |  |
+| SN_PRINT_MSG |  |  |
+| SN_LEADER_CHARACTER |  |  |
+| SA_CHARACTER_UNLOCK |  |  |
+| SA_ITEM_CHANGE |  |  |
+| SA_ITEM_MERGE |  |  |
+| SA_ITEM_EQUIP |  |  |
+| SA_ITEM_UNEQUIP |  |  |
+| SA_ITEM_TRADE |  |  |
+| SA_WEAPON_EQUIP |  |  |
+| SA_GEAR_EQUIP |  |  |
+| SA_GEAR_UNEQUIP |  |  |
+| SA_MASTERGEAR_SELECT |  |  |
+| SA_MASTERGEAR_RENAME |  |  |
+| SA_MASTERGEAR_REPAIR |  |  |
+| SA_MASTERGEAR_ADD |  |  |
+| SA_WEAPON_UPGRADE |  |  |
+| SN_SHOP_ITEM_LIST |  |  |
+| SA_BUY_SHOP_ITEM |  |  |
+| SA_BUY_CSHOP_ITEM |  |  |
+| SA_SELL_SHOP_ITEM |  |  |
+| SA_ITEM_USE |  |  |
+| SA_GET_GROUND_ITEM |  |  |
+| SN_GET_GROUND_ITEM |  |  |
+| SN_GET_PUBLIC_GROUND_ITEM |  |  |
+| SN_CREATE_GROUND_ITEM |  |  |
+| SN_ITEM_ACQUISITION |  |  |
+| SN_ITEM_UPDATE |  |  |
+| SN_ITEM_OPTIONGROUP_LIST |  |  |
+| SA_INVENTORY_EXPAND |  |  |
+| SN_WAREHOUSE_ITEM_UPDATE |  |  |
+| SN_WAREHOUSE_ITEMS |  |  |
+| SA_WAREHOUSE_EXPAND |  |  |
+| SA_WAREHOUSE_ITEM_CHANGE |  |  |
+| SA_WAREHOUSE_ITEM_MERGE |  |  |
+| SN_PLAYER_SKILL_SLOT |  |  |
+| SN_PLAYER_SKILL_UPDATE |  |  |
+| SA_SKILL_UPGRADE |  |  |
+| SA_SKILL_UPGRADE_PVP |  |  |
+| SA_SKILL_SELECT |  |  |
+| SA_SKILL_SWAP |  |  |
+| SA_PLAYER_CAST_SKILL |  |  |
+| SA_PLAYER_USE_SKILL |  |  |
+| SN_LOAD_CLEARED_STAGES |  |  |
+| SN_STAGE_CLEAR_RESULT |  |  |
+| SN_STAGE_CLEAR_RANKING |  |  |
+| SN_REWARD_ITEM_LIST |  |  |
+| SN_REWARD_STAGE_START |  |  |
+| SA_REWARD_SELECT_SLOT |  |  |
+| SA_REWARD_SELECT_SLOT_ALL_RANDOM |  |  |
+| SA_REWARD_REQUEST_FINISH |  |  |
+| SA_REWARD_BUY_CHANCE |  |  |
+| SA_REWARD_OPEN_ALL_SLOTS |  |  |
+| SN_REWARD_STAGE_END |  |  |
+| SN_PVP_END_RESULT |  |  |
+| SN_PVP_EVENT_ANNOUNCEMENT |  |  |
+| SN_NOTIFY_PVP_SKILL_UPGRADE_AVAILABLE |  |  |
+| SN_NOTIFY_PVP_SKILL_POINT |  |  |
+| SA_HONOR |  |  |
+| SA_BLAME |  |  |
+| SN_PLAYER_TITLE_SELECT |  |  |
+| SA_TITLE_SELECT |  |  |
+| SN_TITLE_ADD |  |  |
+| SN_GAME_RESTRICTION |  |  |
+| SN_CITY_MAP_INFO |  |  |
+| SN_LOAD_CHARACTER_START |  |  |
+| SN_DESTROY_ENTITY |  |  |
+| SN_GAME_CREATE_ACTOR |  |  |
+| SN_GAME_MODIFY_ACTOR |  |  |
+| SN_GAME_CREATE_SUB_ACTOR |  |  |
+| SN_GAME_ENTER_ACTOR |  |  |
+| SN_GAME_LEAVE_ACTOR |  |  |
+| SN_STATUS_SNAPSHOT |  |  |
+| SN_GAME_PLAYER_STOCK |  |  |
+| SN_GAME_PLAYER_EQUIP_WEAPON |  |  |
+| SN_GAME_PLAYER_EQUIP_GEAR |  |  |
+| SN_GAME_REGISTER_USERPC |  |  |
+| SN_LOBBY_START_GAME |  |  |
+| SN_UPDATE_GAMEOWNER |  |  |
+| SN_UPDATE_AIHOST |  |  |
+| SN_GAME_AREA_MOVE |  |  |
+| SN_GAME_START |  |  |
+| SA_GAME_READY |  |  |
+| SN_TRESPASS_GAME_START |  |  |
+| SN_TRESPASS_READY |  |  |
+| SN_UPDATE_STAT |  |  |
+| SN_MONEY |  |  |
+| SN_C_COIN |  |  |
+| SN_UPDATE_SOUL |  |  |
+| SN_DAMAGE |  |  |
+| SN_DEAD_ACK |  |  |
+| SA_SELECT_BADGE |  |  |
+| SN_GAME_PLAYER_SYNC_BY_INT |  |  |
+| SA_SUMMARY_INFO_ALL |  |  |
+| SA_REQUEST_SUMMARY_INFO_EACH |  |  |
+| SA_REQUEST_SUMMARY_INFO_LATEST |  |  |
+| SN_AVAILABLE_SUMMARY_REWARD_COUNT_LIST |  |  |
+| SN_SUMMARY_REWARD_RESULT |  |  |
+| SN_SUMMARY_UPDATE |  |  |
+| SN_ANTIHACK_AUTH |  |  |
+| SA_ACHIEVE_INFO |  |  |
+| SN_ACHIEVE_INFO_UPDATE |  |  |
+| SA_ACHIEVE_LATEST |  |  |
+| SN_ACHIEVE_UPDATE |  |  |
+| SA_TIER_RECORD |  |  |
+| SA_TIER_STAGE_RECORD |  |  |
+| SN_ACCOUNT_INFO |  |  |
+| SN_HONOR_POINT |  |  |
+| SN_ALL_CHARACTER_BASESTAT |  |  |
+| SA_SET_NICKNAME |  |  |
+| SA_CHECK_DUP_NICKNAME |  |  |
+| SN_PROFILE_CHARACTERS |  |  |
+| SN_PROFILE_ITEMS |  |  |
+| SN_PROFILE_WEAPONS |  |  |
+| SN_PROFILE_MASTERGEARS |  |  |
+| SN_PROFILE_SKILLS |  |  |
+| SN_PROFILE_SKILLS_UPDATE |  |  |
+| SN_PROFILE_TITLES |  |  |
+| SN_PROFILE_CHARACTER_SKIN_LIST |  |  |
+| SN_EXTRA_CHARACTERS |  |  |
+| SN_STAGE_RANK |  |  |
+| SN_GAME_PLAYER_TAG |  |  |
+| SA_GET_CHARACTER_INFO |  |  |
+| SA_AREA_POPULARITY |  |  |
+| SN_AREA_POPULARITY |  |  |
+| SN_MASTER_PICK |  |  |
+| SA_MASTER_PICK |  |  |
+| SN_MASTER_UNPICK |  |  |
+| SA_MASTER_UNPICK |  |  |
+| SN_MASTER_UNPICK_ALL |  |  |
+| SA_MASTER_UNPICK_ALL |  |  |
+| SA_START_GAME |  |  |
+| SN_START_GAME_NOT_QUALIFIED |  |  |
+| SA_ENQUEUE_GAME |  |  |
+| SN_ENQUEUE_MATCHING_QUEUE |  |  |
+| SA_CANCEL_MATCHING_QUEUE |  |  |
+| SN_CANCEL_MATCHING_QUEUE |  |  |
+| SN_MATCHING_QUEUE_WAITING_USERS |  |  |
+| SN_MATCHING_PENALTY |  |  |
+| SN_ACTIVE_INGAME_EVENT_LIST |  |  |
+| SN_START_COUNTDOWN_SORTIE_ROOM |  |  |
+| SN_SORTIE_PREPARE |  |  |
+| SN_SORTIE_PREPARE_BOT_INFO |  |  |
+| SN_USE_FAIRPVP_DATA |  |  |
+| SN_MASTER_ROTATION_INFO |  |  |
+| SA_PVE_RANKING |  |  |
+| SN_PVP_RANK_BAN_PHASE_START |  |  |
+| SN_PVP_RANK_BAN_PHASE_END |  |  |
+| SA_PVP_RANK_CHARACTER_BAN |  |  |
+| SN_PVP_RANK_CHARACTER_BAN |  |  |
+| SN_PVP_RANK_ASSIGN_PHASE_START |  |  |
+| SN_PVP_RANK_ASSIGN_PHASE_END |  |  |
+| SA_PVP_RANK_CHARACTER_ASSIGN |  |  |
+| SN_PVP_RANK_CHARACTER_ASSIGN |  |  |
+| SN_SORTIE_PICK_PHASE_START |  |  |
+| SN_SORTIE_PICK_PHASE_END |  |  |
+| SN_SORTIE_CHARACTER_SLOT_INFO |  |  |
+| SN_SORTIE_PICK_PHASE_STEP_START |  |  |
+| SN_SORTIE_PICK_PHASE_STEP_END |  |  |
+| SN_DESPAWN_MONSTERS |  |  |
+| SN_DESPAWN_MONSTER |  |  |
+| SN_NOTIFY_PC_DETAIL_INFOS |  |  |
+| SN_ADD_STATUS |  |  |
+| SN_MODIFY_STATUS |  |  |
+| SN_REMOVE_STATUS |  |  |
+| SN_LEAVE_USER |  |  |
+| SN_BROADCAST_DAMAGE |  |  |
+| SN_REMOTE_ACTIVATED |  |  |
+| SA_RESULT_SP_ACTION |  |  |
+| SN_BROADCAST_EVADE |  |  |
+| SA_COMMUNITY_CHANNEL_MOVE |  |  |
+| SA_COMRADE_EXPAND |  |  |
+| SA_COMMUNITY_STATUS_MESSAGE |  |  |
+| SN_COMMUNITY_STATUS_MESSAGE |  |  |
+| SA_COMMUNITY_BLOCK_ADD |  |  |
+| SA_COMMUNITY_BLOCK_REMOVE |  |  |
+| SN_BLOCK_LIST |  |  |
+| SA_REQUEST_LEADER_INFO |  |  |
+| SA_CHARACTER_SKIN_SELECT |  |  |
+| SN_CHARACTER_SKIN_UNLOCK |  |  |
+| SN_PLAYER_SYNC_MOVE |  |  |
+| SN_PLAYER_SYNC_TURN |  |  |
+| SN_PLAYER_SYNC_ACTIONSTATE |  |  |
+| SN_PLAYER_SERVER_POSITION |  |  |
+| SN_REMOTE_SERVER_POSITION |  |  |
+| SN_MONSTER_SERVER_POSITION |  |  |
+| SN_PLAYER_SYNC_ACTIONSTATE_ONLY |  |  |
+| SN_PLAYER_BLINK |  |  |
+| SN_WEAPON_STATE |  |  |
+| SN_SYNC_ACTION_MOVE |  |  |
+| SN_SYNC_STANCE_TYPE |  |  |
+| SA_STANCE_REFRESH |  |  |
+| SN_REMOTE_SYNC_CREATE_FROM_CREATOR_ID |  |  |
+| SN_REMOTE_SYNC_CREATE_FROM_REMOTE_DOC |  |  |
+| SN_REMOTE_SYNC_TARGET |  |  |
+| SN_REMOTE_SYNC_FORECAST_COLLISION |  |  |
+| SN_CALL_MONSTER_BY_REMOTE_CONTROL |  |  |
+| SQ_USE_LIFERECOVER |  |  |
+| SQ_REVIVE_BY_COIN |  |  |
+| SN_REVIVE_PLAYER |  |  |
+| SN_PVP_REVIVE_PLAYER |  |  |
+| SN_PVP_RESPAWN_DELAYTIME |  |  |
+| SN_NOTIFY_USER_LIFEINFO |  |  |
+| SN_WARN_PVE_GAMEEND |  |  |
+| SQ_KICK_FROM_GAMESERVER |  |  |
+| SN_PVP_SCORE_UPDATE |  |  |
+| SA_USER_AFK |  |  |
+| SN_GAME_EVENT_ACTIVATED |  |  |
+| SN_GAME_EVENT_PENDING |  |  |
+| SN_GAME_EVENT_START |  |  |
+| SN_GAME_EVENT_END |  |  |
+| SN_UPDATE_PVE_AREAINDEX |  |  |
+| SN_REGAME_DATA |  |  |
+| SN_ACTIVATED_SUPPORTKIT |  |  |
+| SN_NOTIFY_COOLTIME |  |  |
+| SN_DAILY_MISSION_LIST |  |  |
+| SN_DAILY_MISSION_UPDATE |  |  |
+| SA_DAILY_MISSION_CHANGE |  |  |
+| SN_PVP_RECORD |  |  |
+| SN_PVP_DETAIL_RECORD |  |  |
+| SN_REDUCE_COOLTIME |  |  |
+| SN_BROADCAST_GAME_PING_DATA |  |  |
+| SQ_HEARTBEAT |  |  |
+| SN_RUN_CLIENT_LEVELEVENT |  |  |
+| SN_RUN_CLIENT_LEVELEVENT_SEQ |  |  |
+| SN_LOADING_PROGRESS_DATA |  |  |
+| SN_ERROR_MESSAGE |  |  |
+| SN_BUSH_OBJECT_STATE |  |  |
+| SN_BUSH_CONTEND_STATE |  |  |
+| SN_NOTIFY_TIMESTAMP |  |  |
+| SA_RTT_TIME |  |  |
+| SN_ACCOUNT_EXTRA_INFO |  |  |
+| SN_PVE_TODAY_STAGE_INFO |  |  |
+| SN_PVE_COMRADE_INFO |  |  |
+| SN_PLAYTIME_PAUSE |  |  |
+| SN_PLAYTIME_RESUME |  |  |
+| SN_INTERACTION_STATUS |  |  |
+| SN_INTERACTION_CANCEL |  |  |
+| SN_INTERACTION_CASTING |  |  |
+| SN_INTERACTION_EXECUTE |  |  |
+| SQ_TELEPORT_OBJECT |  |  |
+| SN_PLAYER_SYNC_TELEPORT |  |  |
+| SN_CHANGE_BATTLE_STATE |  |  |
+| SN_CLIENT_SETTINGS |  |  |
+| SN_GAME_PARTY_BROKEN |  |  |
+| SA_OLYMPIC_BEST_RECORD |  |  |
+| SN_OLYMPIC_INGAME_RECORDS |  |  |
+| SA_PVE_REFILL_BATTERY |  |  |
+| SN_SUSPENDED_TO_CITY |  |  |
+| SN_RESIST_STATUS |  |  |
+| SA_TRANSFORM_CHARACTER |  |  |
+| SN_TRANSFORM_CHARACTER |  |  |
+| SN_DYNAMIC_SYNC_ANI_TRACK |  |  |
+| SN_ACCOUNT_EQUIPMENTS |  |  |
+| SN_NCGUARD_MSG |  |  |
+| SA_WATCH_GAME |  |  |
+| SN_ADDICTION_WARNING |  |  |
+
+## Login
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| Pong |  |  |
+| CQ_USER_LOGIN |  |  |
+| CQ_LOGIN_BY_NP |  |  |
+| CQ_LOGIN_BY_HANDOVER |  |  |
+| CQ_FIRST_HELLO_TO_GAME_SERVER |  |  |
+| CQ_FIRST_HELLO_TO_MAIN_SERVER |  |  |
+| CQ_SET_NICKNAME |  |  |
+| CQ_CHECK_DUP_NICKNAME |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_FIRST_HELLO |  |  |
+| SA_LOGIN_RESULT |  |  |
+| SA_LOGIN_BY_NP_RESULT |  |  |
+| SA_SERVER_VERSION_INFO |  |  |
+| SN_DO_CONNECT_GAME_SERVER |  |  |
+| SN_DO_CONNECT_CHANNEL_SERVER |  |  |
+| SA_LOGIN_BY_HANDOVER |  |  |
+
+## Match
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+
+## Chat
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CN_COMMUNITY_CHAT |  |  |
+| CQ_CHANNEL_CHAT |  |  |
+| CQ_CHAT_CHANNEL_INVITE |  |  |
+| CQ_WHISPER_SEND |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_COMMUNITY_CHAT |  |  |
+| SN_TGCHAT_SERVER_INFO |  |  |
+| SN_CHAT_CHANNEL_INVITE |  |  |
+| SA_CHAT_CHANNEL_INVITE |  |  |
+| SA_WHISPER_SEND |  |  |
+| SN_WHISPER_RECEIVED |  |  |
+| SA_CHANNEL_CHAT |  |  |
+| SN_CHAT_CHANNEL_JOIN |  |  |
+| SN_CHAT_CHANNEL_LEAVE |  |  |
+| SN_CHAT_CHANNEL_MESSAGE |  |  |
+| SN_CHAT_CHANNEL_USER_JOIN |  |  |
+| SN_CHAT_CHANNEL_USER_LEAVE |  |  |
+
+## Party
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CQ_PARTY_CREATE |  |  |
+| CQ_PARTY_MODIFY |  |  |
+| CQ_PARTY_SWAP_TEAM |  |  |
+| CQ_PARTY_INVITE |  |  |
+| CQ_PARTY_INVITE_RECOMMEND |  |  |
+| CQ_PARTY_INVITE_RECOMMEND_RESPONSE |  |  |
+| CN_PARTY_INVITE_RESPONSE |  |  |
+| CQ_PARTY_JOIN |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SA_PARTY_CREATE |  |  |
+| SA_PARTY_INVITE |  |  |
+| SN_PARTY_INVITE |  |  |
+| SA_PARTY_INVITE_RECOMMEND |  |  |
+| SN_PARTY_INVITE_RECOMMEND |  |  |
+| SA_PARTY_INVITE_RECOMMEND_RESPONSE |  |  |
+| SN_PARTY_INVITE_RECOMMEND_RESPONSE |  |  |
+| SN_PARTY_JOIN |  |  |
+| SA_PARTY_JOIN |  |  |
+| SN_PARTY_LEAVE |  |  |
+| SA_PARTY_LEAVE |  |  |
+| SA_PARTY_ADD_BOT |  |  |
+| SA_PARTY_REMOVE_BOT |  |  |
+| SN_PARTY_CANCEL_INVITE |  |  |
+| SA_SORTIE_ROOM_BREAKUP |  |  |
+| SN_SORTIE_ROOM_BREAKUP |  |  |
+| SQ_SORTIE_ROOM_FOUND |  |  |
+| SN_SORTIE_ROOM_CONFIRM |  |  |
+| SN_SORTIE_ROOM_GATHER_FINISH |  |  |
+| SN_CHANNEL_CHATTING_CHANNEL |  |  |
+| SN_READY_SORTIE_ROOM |  |  |
+| SA_PARTY_SWAP_TEAM |  |  |
+| SN_PARTY_SWAP_TEAM |  |  |
+| SN_PARTY_INVITE_RESPONSE |  |  |
+| SA_PARTY_BREAKUP |  |  |
+| SN_PARTY_BREAKUP |  |  |
+| SN_PARTY_KICKED |  |  |
+| SA_PARTY_KICK_ALL |  |  |
+
+## Friends
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CQ_FRIEND_REQUEST |  |  |
+| CQ_FRIEND_RESPOND |  |  |
+| CQ_FRIEND_STATE_CHANGE |  |  |
+| CQ_FRIEND_REQUEST_LEADER_INFO |  |  |
+| CQ_FRIEND_SET_COMRADE |  |  |
+| CQ_FRIEND_UNSET_COMRADE |  |  |
+| CQ_FRIEND_REMOVE |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_FRIEND_LIST |  |  |
+| SN_FRIEND_REQUEST_LIST |  |  |
+| SN_FRIEND_LOGIN |  |  |
+| SN_FRIEND_LOGOUT |  |  |
+| SN_FRIEND_ADDED |  |  |
+| SN_FRIEND_REMOVED |  |  |
+| SA_FRIEND_REMOVE |  |  |
+| SA_FRIEND_REQUEST |  |  |
+| SN_FRIEND_REQUESTED |  |  |
+| SA_FRIEND_RESPOND |  |  |
+| SN_FRIEND_RESPONDED |  |  |
+| SA_FRIEND_REQUEST_LEADER_INFO |  |  |
+| SA_FRIEND_SET_COMRADE |  |  |
+| SA_FRIEND_UNSET_COMRADE |  |  |
+| SA_FRIEND_STATE_CHANGE |  |  |
+| SN_FRIEND_STATE_CHANGED |  |  |
+| SN_FRIEND_LEADER_CHANGED |  |  |
+
+## Mail
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CQ_MAIL_SHOW_LIST |  |  |
+| CQ_MAIL_WRITE |  |  |
+| CQ_MAIL_READ |  |  |
+| CQ_MAIL_GET_ATTACHMENT |  |  |
+| CQ_MAIL_MOVE |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_MAIL_UNREAD_NOTICE |  |  |
+| SN_MAIL_LIST |  |  |
+| SN_MAIL_BLOCKLIST |  |  |
+| SN_MAIL_WRITE_RESULT |  |  |
+| SN_MAIL_READ |  |  |
+| SN_MAIL_GET_ATTACHMENT_RESULT |  |  |
+| SN_MAIL_LIST_NEW_INBOX |  |  |
+| SN_MAIL_MOVE_RESULT |  |  |
+
+## Lobby/Matchmaking
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+
+## Item
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+|  |  |  |
+
+## AI
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| CN_AI_SET_TARGET_TEMP |  |  |
+| CN_AI_SET_MOVESTATE_TEMP |  |  |
+| CN_AI_SET_ACTIONSTATE_TEMP |  |  |
+
+### Server
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| SN_AI_SYNC_MOVE_MOTION |  |  |
+| SN_AI_SYNC_BEHAVIOR_MOTION |  |  |
+| SN_AI_SYNC_SPEED_RATIO |  |  |
+| SN_AI_SYNC_ROTATE_RATIO |  |  |
+| SN_AI_SYNC_SCENEROOT |  |  |
+| SN_AI_SYNC_TARPOS |  |  |
+| SN_AI_SYNC_TARGET |  |  |
+| SN_AI_ADD_COM |  |  |
+| SN_AI_SYNC_BODY_YAW |  |  |
+| SN_AI_SYNC_BODY_PITCH |  |  |
+| SN_AI_SYNC_PHY |  |  |
+| SN_AI_SYNC_COOLTIME |  |  |
+| SN_AIMONSTER_SYNC_MOVE |  |  |
+| SN_AIMONSTER_SYNC_TURN |  |  |
+| SN_AI_SET_TARGET |  |  |
+| SN_AI_SET_ACTIONSTATE |  |  |
+| SN_AI_SET_MOVETARGETPOS |  |  |
+| SN_AI_SET_GRAPHMOVETARGETPOS |  |  |
+| SN_AI_CHANGE_MOVE_TYPE |  |  |
+
+## Legacy
+### Client
+| Name | Opcode | Info |
+| ---- | ------ | ---- |
+| LEGACY_PLAYER_SYNC_MOVE |  |  |
+| LEGACY_PLAYER_SYNC_TURN|  |  |
+| LEGACY_PLAYER_SYNC_ACTIONSTATE |  |  |
+| LEGACY_WEAPON_STATE |  |  |
+| LEGACY_SYNC_ACTION_MOVE |  |  |
+| LEGACY_SYNC_STANCE_TYPE |  |  |
+| LEGACY_AI_SYNC_MOVE_MOTION |  |  |
+| LEGACY_AI_SYNC_BEHAVIOR_MOTION |  |  |
+| LEGACY_AI_SYNC_SPEED_RATIO |  |  |
+| LEGACY_AI_SYNC_ROTATE_RATIO |  |  |
+| LEGACY_AI_SYNC_SCENEROOT |  |  |
+| LEGACY_AI_SYNC_TARPOS |  |  |
+| LEGACY_AI_SYNC_TARPOS_TO_SERVER |  |  |
+| LEGACY_AI_SYNC_STATUS |  |  |
+| LEGACY_AI_SYNC_TARGET |  |  |
+| LEGACY_AI_ADD_COM |  |  |
+| LEGACY_AI_SYNC_BODY_YAW |  |  |
+| LEGACY_AI_SYNC_BODY_PITCH |  |  |
+| LEGACY_AI_SYNC_PHY |  |  |
+| LEGACY_AI_SYNC_COOLTIME |  |  |
+| LEGACY_REMOTE_SYNC_CREATE_FROM_CREATOR_ID |  |  |
+| LEGACY_REMOTE_SYNC_CREATE_FROM_REMOTE_DOC |  |  |
+| LEGACY_REMOTE_SYNC_TARGET |  |  |
+| LEGACY_REMOTE_SYNC_FORECAST_COLLISION |  |  |
